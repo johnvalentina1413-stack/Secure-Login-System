@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# SQLite database - contains user/authentication data
+database.db
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables / secrets
+.env
+
+# Flask / local files
+instance/
+
+# IDE files
+.vscode/
+.idea/
