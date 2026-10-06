@@ -479,7 +479,7 @@ Through this project, the following concepts were practiced:
 
 ![Registration Page For Account Creation](createAccount.png)
 
-![Incorrect Login Credentials Account ](attemptsLeft_fro_wrong_credentials.png)
+![Incorrect Login Credentials Account ](attemptsLeft_for_wrong_credentials.png)
 
 
 
