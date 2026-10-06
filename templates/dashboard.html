@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Security Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-page">
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🛡️
+            </div>
+
+            <div>
+                <h2>SecureGuard</h2>
+                <span>Authentication System</span>
+            </div>
+
+        </div>
+
+        <div class="nav-user">
+
+            <div class="user-mini">
+
+                <div class="avatar">
+                    {{ username[0].upper() }}
+                </div>
+
+                <span>{{ username }}</span>
+
+            </div>
+
+            <a href="{{ url_for('logout') }}" class="logout-btn">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main class="dashboard-main">
+
+        <section class="welcome-section">
+
+            <div>
+
+                <p class="section-label">
+                    SECURITY DASHBOARD
+                </p>
+
+                <h1>
+                    Welcome back, {{ username }} 👋
+                </h1>
+
+                <p class="welcome-text">
+                    Your account is protected by multiple
+                    authentication security controls.
+                </p>
+
+            </div>
+
+            <div class="security-badge">
+
+                <span class="status-dot"></span>
+
+                Account Secure
+
+            </div>
+
+        </section>
+
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    🔐
+                </div>
+
+                <div>
+                    <p>Password Security</p>
+                    <h3>HASHED</h3>
+                    <span>Password protected</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    🛡️
+                </div>
+
+                <div>
+                    <p>Attack Protection</p>
+                    <h3>ACTIVE</h3>
+                    <span>Brute-force protection</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    ⏱️
+                </div>
+
+                <div>
+                    <p>Lockout Policy</p>
+                    <h3>5 ATTEMPTS</h3>
+                    <span>Temporary lockout enabled</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="content-grid">
+
+            <div class="panel security-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            PROTECTION
+                        </p>
+
+                        <h2>
+                            Security Overview
+                        </h2>
+
+                    </div>
+
+                    <div class="shield-large">
+                        🛡️
+                    </div>
+
+                </div>
+
+
+                <div class="security-item">
+
+                    <div class="security-item-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h4>Password Hashing</h4>
+
+                        <p>
+                            Passwords are stored using secure
+                            one-way hashing instead of plaintext.
+                        </p>
+
+                    </div>
+
+                    <span class="active-label">
+                        Active
+                    </span>
+
+                </div>
+
+
+                <div class="security-item">
+
+                    <div class="security-item-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h4>Brute-Force Protection</h4>
+
+                        <p>
+                            Failed login attempts are monitored
+                            to prevent repeated attacks.
+                        </p>
+
+                    </div>
+
+                    <span class="active-label">
+                        Active
+                    </span>
+
+                </div>
+
+
+                <div class="security-item">
+
+                    <div class="security-item-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h4>Account Lockout</h4>
+
+                        <p>
+                            Five failed attempts trigger a
+                            temporary account lockout.
+                        </p>
+
+                    </div>
+
+                    <span class="active-label">
+                        Active
+                    </span>
+
+                </div>
+
+
+                <div class="security-item">
+
+                    <div class="security-item-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h4>Session Authentication</h4>
+
+                        <p>
+                            Authenticated sessions protect
+                            access to this dashboard.
+                        </p>
+
+                    </div>
+
+                    <span class="active-label">
+                        Active
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel account-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            ACCOUNT
+                        </p>
+
+                        <h2>
+                            Account Details
+                        </h2>
+
+                    </div>
+
+                    <div class="account-icon">
+                        👤
+                    </div>
+
+                </div>
+
+
+                <div class="profile-box">
+
+                    <div class="big-avatar">
+                        {{ username[0].upper() }}
+                    </div>
+
+                    <div>
+
+                        <h3>{{ username }}</h3>
+
+                        <p>
+                            Authenticated User
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>Account Status</span>
+
+                    <strong class="online">
+                        ● Active
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>Authentication</span>
+
+                    <strong>
+                        Password
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>Database</span>
+
+                    <strong>
+                        SQLite
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>Protection</span>
+
+                    <strong class="protected">
+                        🛡 Protected
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="security-banner">
+
+            <div class="banner-icon">
+                🔒
+            </div>
+
+            <div>
+
+                <h3>
+                    Your authentication is protected
+                </h3>
+
+                <p>
+                    This system uses password hashing,
+                    login-attempt monitoring and temporary
+                    account lockout to reduce the risk of
+                    brute-force attacks.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer class="dashboard-footer">
+
+            <span>
+                SecureGuard Authentication System
+            </span>
+
+            <span>
+                Security Demo • Flask + SQLite
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
