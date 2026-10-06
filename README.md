@@ -481,6 +481,11 @@ Through this project, the following concepts were practiced:
 
 ![Incorrect Login Credentials Account ](attemptsLeft_for_wrong_credentials.png)
 
+### 🗄️ Database Privacy Note
+
+The application automatically creates a `database.db` SQLite database when it is first run. The database stores registered user information, including authentication-related data. For **privacy and security reasons**, the generated database file is intentionally excluded from this GitHub repository using `.gitignore`. Each user running the project can generate their own local database automatically.
+
+
 
 
 ## 👩‍💻 Author
